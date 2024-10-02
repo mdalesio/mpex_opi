@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-10-01 09:54:31 by user-->
+<display version="2.0.0">
+  <name>vcs_rdy</name>
+  <width>290</width>
+  <height>160</height>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>VAC_PMIT:TRAIN:TRN_mode</pv_name>
+    <x>20</x>
+    <y>40</y>
+    <states>
+      <state>
+        <value>0</value>
+        <label>Off</label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>5</value>
+        <label>Turbo</label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label>Rough</label>
+        <color>
+          <color red="255" green="255" blue="77">
+          </color>
+        </color>
+      </state>
+    </states>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Turbo Pumping</text>
+    <x>60</x>
+    <y>40</y>
+    <width>180</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Vacuum Ready Screen</text>
+    <x>20</x>
+    <y>10</y>
+    <width>290</width>
+    <height>30</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>VAC_PMIT:PMP:TPMP_sts</pv_name>
+    <x>60</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Turbopump On</text>
+    <x>100</x>
+    <y>70</y>
+    <width>140</width>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_2</name>
+    <pv_name>VAC_PMIT:PMP:RPMP_sts</pv_name>
+    <x>60</x>
+    <y>100</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Rough pump On</text>
+    <x>100</x>
+    <y>100</y>
+    <width>140</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Turbo Train Valve Open</text>
+    <x>60</x>
+    <y>130</y>
+    <width>170</width>
+  </widget>
+  <widget type="ellipse" version="2.0.0">
+    <name>Ellipse</name>
+    <x>20</x>
+    <y>130</y>
+    <width>20</width>
+    <height>20</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="50" green="50" blue="50" alpha="178">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </background_color>
+  </widget>
+</display>

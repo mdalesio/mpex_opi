@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-10-01 20:33:56 by user-->
+<display version="2.0.0">
+  <name>HVPS</name>
+  <width>1000</width>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs</name>
+    <tabs>
+      <tab>
+        <name>Home</name>
+        <children>
+          <widget type="group" version="3.0.0">
+            <name>Measurements</name>
+            <x>10</x>
+            <y>20</y>
+            <width>540</width>
+            <height>300</height>
+            <widget type="group" version="3.0.0">
+              <name>Vout</name>
+              <macros>
+                <pv>HVPS:Vout</pv>
+              </macros>
+              <x>10</x>
+              <y>10</y>
+              <width>120</width>
+              <height>240</height>
+              <widget type="tank" version="2.0.0">
+                <name>Tank_1</name>
+                <pv_name>$(pv)</pv_name>
+                <x>10</x>
+                <y>10</y>
+                <width>60</width>
+                <height>160</height>
+                <fill_color>
+                  <color name="On" red="0" green="255" blue="0">
+                  </color>
+                </fill_color>
+                <empty_color>
+                  <color name="Background" red="255" green="255" blue="255">
+                  </color>
+                </empty_color>
+                <maximum>80.0</maximum>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_1</name>
+                <pv_name>$(pv)</pv_name>
+                <x>10</x>
+                <y>170</y>
+                <width>60</width>
+                <height>30</height>
+                <horizontal_alignment>1</horizontal_alignment>
+              </widget>
+            </widget>
+            <widget type="group" version="3.0.0">
+              <name>Iout</name>
+              <macros>
+                <pv>HVPS:Iout</pv>
+              </macros>
+              <x>130</x>
+              <y>10</y>
+              <width>120</width>
+              <height>240</height>
+              <widget type="tank" version="2.0.0">
+                <name>Tank_2</name>
+                <pv_name>$(pv)</pv_name>
+                <x>10</x>
+                <y>10</y>
+                <width>60</width>
+                <height>160</height>
+                <fill_color>
+                  <color name="On" red="0" green="255" blue="0">
+                  </color>
+                </fill_color>
+                <empty_color>
+                  <color name="Background" red="255" green="255" blue="255">
+                  </color>
+                </empty_color>
+                <maximum>80.0</maximum>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_2</name>
+                <pv_name>$(pv)</pv_name>
+                <x>10</x>
+                <y>170</y>
+                <width>60</width>
+                <height>30</height>
+                <horizontal_alignment>1</horizontal_alignment>
+              </widget>
+            </widget>
+            <widget type="group" version="3.0.0">
+              <name>Vout peak</name>
+              <macros>
+                <pv>HVPS:Vout_peak</pv>
+              </macros>
+              <x>250</x>
+              <y>10</y>
+              <width>120</width>
+              <height>240</height>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_3</name>
+                <pv_name>$(pv)</pv_name>
+                <x>10</x>
+                <y>170</y>
+                <width>60</width>
+                <height>30</height>
+                <horizontal_alignment>1</horizontal_alignment>
+              </widget>
+              <widget type="tank" version="2.0.0">
+                <name>Tank_3</name>
+                <pv_name>$(pv)</pv_name>
+                <x>10</x>
+                <y>10</y>
+                <width>60</width>
+                <height>160</height>
+                <fill_color>
+                  <color name="On" red="0" green="255" blue="0">
+                  </color>
+                </fill_color>
+                <empty_color>
+                  <color name="Background" red="255" green="255" blue="255">
+                  </color>
+                </empty_color>
+                <maximum>80.0</maximum>
+              </widget>
+            </widget>
+            <widget type="group" version="3.0.0">
+              <name>Iout peak</name>
+              <macros>
+                <pv>HVPS:Iout_peak</pv>
+              </macros>
+              <x>370</x>
+              <y>10</y>
+              <width>120</width>
+              <height>240</height>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_4</name>
+                <pv_name>$(pv)</pv_name>
+                <x>10</x>
+                <y>170</y>
+                <width>60</width>
+                <height>30</height>
+                <horizontal_alignment>1</horizontal_alignment>
+              </widget>
+              <widget type="tank" version="2.0.0">
+                <name>Tank_4</name>
+                <pv_name>$(pv)</pv_name>
+                <x>10</x>
+                <y>10</y>
+                <width>60</width>
+                <height>160</height>
+                <fill_color>
+                  <color name="On" red="0" green="255" blue="0">
+                  </color>
+                </fill_color>
+                <empty_color>
+                  <color name="Background" red="255" green="255" blue="255">
+                  </color>
+                </empty_color>
+                <maximum>80.0</maximum>
+              </widget>
+            </widget>
+          </widget>
+          <widget type="group" version="3.0.0">
+            <name>Preconditions</name>
+            <x>560</x>
+            <y>20</y>
+            <height>300</height>
+            <widget type="group" version="3.0.0">
+              <name>precon1</name>
+              <macros>
+                <label>Access door closed and locked</label>
+                <pv>HVPS:accd_sts</pv>
+              </macros>
+              <y>10</y>
+              <width>250</width>
+              <height>40</height>
+              <style>3</style>
+              <widget type="led" version="2.0.0">
+                <name>LED_1</name>
+                <x>10</x>
+                <y>10</y>
+              </widget>
+              <widget type="label" version="2.0.0">
+                <name>Label</name>
+                <text>$(label)</text>
+                <x>40</x>
+                <y>10</y>
+                <width>200</width>
+              </widget>
+            </widget>
+            <widget type="group" version="3.0.0">
+              <name>precon2</name>
+              <macros>
+                <label></label>
+                <pv></pv>
+              </macros>
+              <y>50</y>
+              <width>250</width>
+              <height>40</height>
+              <style>3</style>
+              <widget type="led" version="2.0.0">
+                <name>LED_2</name>
+                <x>10</x>
+                <y>10</y>
+              </widget>
+              <widget type="label" version="2.0.0">
+                <name>Label_1</name>
+                <text>$(label)</text>
+                <x>40</x>
+                <y>10</y>
+                <width>200</width>
+              </widget>
+            </widget>
+            <widget type="group" version="3.0.0">
+              <name>precon3</name>
+              <macros>
+                <label></label>
+                <pv></pv>
+              </macros>
+              <y>90</y>
+              <width>250</width>
+              <height>40</height>
+              <style>3</style>
+              <widget type="led" version="2.0.0">
+                <name>LED_3</name>
+                <x>10</x>
+                <y>10</y>
+              </widget>
+              <widget type="label" version="2.0.0">
+                <name>Label_2</name>
+                <text>$(label)</text>
+                <x>40</x>
+                <y>10</y>
+                <width>200</width>
+              </widget>
+            </widget>
+            <widget type="group" version="3.0.0">
+              <name>precon4</name>
+              <macros>
+                <label></label>
+                <pv></pv>
+              </macros>
+              <y>130</y>
+              <width>250</width>
+              <height>40</height>
+              <style>3</style>
+              <widget type="led" version="2.0.0">
+                <name>LED_4</name>
+                <x>10</x>
+                <y>10</y>
+              </widget>
+              <widget type="label" version="2.0.0">
+                <name>Label_3</name>
+                <text>$(label)</text>
+                <x>40</x>
+                <y>10</y>
+                <width>200</width>
+              </widget>
+            </widget>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 2</name>
+        <children>
+        </children>
+      </tab>
+    </tabs>
+    <width>890</width>
+    <height>600</height>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Target</name>
+    <x>900</x>
+    <y>30</y>
+    <width>100</width>
+    <height>100</height>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>HVPS:STS</pv_name>
+      <width>60</width>
+      <height>60</height>
+      <square>true</square>
+      <states>
+        <state>
+          <value>0</value>
+          <label>Off</label>
+          <color>
+            <color name="Off" red="60" green="100" blue="60">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label>Standby</label>
+          <color>
+            <color name="ActiveText" red="255" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label>On</label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+  </widget>
+</display>

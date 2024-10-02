@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-10-01 11:43:51 by user-->
+<display version="2.0.0">
+  <name>vac_ops</name>
+  <width>570</width>
+  <height>470</height>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_6</name>
+    <x>175</x>
+    <y>90</y>
+    <width>150</width>
+    <height>220</height>
+    <points>
+      <point x="150.0" y="0.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="220.0">
+      </point>
+      <point x="150.0" y="220.0">
+      </point>
+    </points>
+    <line_width>10</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_5</name>
+    <x>330</x>
+    <y>70</y>
+    <width>6</width>
+    <height>370</height>
+    <points>
+      <point x="0.0" y="369.99999999999994">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+    <line_width>10</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>VAC_PMI:GGE:P</pv_name>
+    <x>275</x>
+    <y>440</y>
+    <width>150</width>
+    <height>30</height>
+    <format>2</format>
+    <precision>4</precision>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="ellipse" version="2.0.0">
+    <name>Ellipse</name>
+    <x>295</x>
+    <width>70</width>
+    <height>70</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <rules>
+      <rule name="Status" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0=1">
+          <value>
+            <color red="0" green="255" blue="0">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0=0">
+          <value>
+            <color red="255" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>VAC_PMIT:PMP:RPMP_sts</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>VAC_PMIT:PMP:RPMP</text>
+    <x>365</x>
+    <width>160</width>
+    <height>30</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:PMP:RPMP_req</pv_name>
+        <value>1</value>
+        <description>On_req</description>
+      </action>
+    </actions>
+    <x>395</x>
+    <y>30</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:PMP:RPMP_req</pv_name>
+        <value>0</value>
+        <description>Off_req</description>
+      </action>
+    </actions>
+    <x>395</x>
+    <y>50</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <x>345</x>
+    <y>10</y>
+    <width>10</width>
+    <height>60</height>
+    <points>
+      <point x="9.0" y="0.0">
+      </point>
+      <point x="0.0" y="56.0">
+      </point>
+    </points>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_1</name>
+    <x>305</x>
+    <y>10</y>
+    <width>10</width>
+    <height>60</height>
+    <points>
+      <point x="0.0" y="1.0">
+      </point>
+      <point x="9.0" y="56.0">
+      </point>
+    </points>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+  </widget>
+  <widget type="ellipse" version="2.0.0">
+    <name>Ellipse_1</name>
+    <x>295</x>
+    <y>130</y>
+    <width>70</width>
+    <height>70</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <rules>
+      <rule name="Status" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0=1">
+          <value>
+            <color red="0" green="255" blue="0">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0=0">
+          <value>
+            <color red="255" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>VAC_PMIT:PMP:TPMP_sts</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>VAC_PMIT:PMP:TPMP</text>
+    <x>365</x>
+    <y>130</y>
+    <width>160</width>
+    <height>30</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:PMP:TPMP_req</pv_name>
+        <value>1</value>
+        <description>On_req</description>
+      </action>
+    </actions>
+    <x>395</x>
+    <y>160</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:PMP:TPMP_req</pv_name>
+        <value>0</value>
+        <description>Off_req</description>
+      </action>
+    </actions>
+    <x>395</x>
+    <y>180</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_2</name>
+    <x>345</x>
+    <y>140</y>
+    <width>10</width>
+    <height>60</height>
+    <points>
+      <point x="9.0" y="0.0">
+      </point>
+      <point x="0.0" y="56.0">
+      </point>
+    </points>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_3</name>
+    <x>305</x>
+    <y>140</y>
+    <width>10</width>
+    <height>60</height>
+    <points>
+      <point x="0.0" y="1.0">
+      </point>
+      <point x="9.0" y="56.0">
+      </point>
+    </points>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>valve</name>
+    <x>295</x>
+    <y>320</y>
+    <width>70</width>
+    <height>70</height>
+    <points>
+      <point x="70.0" y="70.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="70.0" y="0.0">
+      </point>
+      <point x="0.0" y="70.0">
+      </point>
+    </points>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <rules>
+      <rule name="open/close" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color red="0" green="255" blue="0">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color red="255" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>VAC_PMI:VLV:TTRAIN_sts</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_5</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>VAC_PMI:VLV:TTRAIN_req</pv_name>
+        <value>1</value>
+        <description>Open_req</description>
+      </action>
+    </actions>
+    <x>395</x>
+    <y>350</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_6</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>VAC_PMI:VLV:TTRAIN_req</pv_name>
+        <value>0</value>
+        <description>Close_req</description>
+      </action>
+    </actions>
+    <x>395</x>
+    <y>370</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>VAC_PMI:VLV:TTRAIN</text>
+    <x>365</x>
+    <y>320</y>
+    <width>160</width>
+    <height>30</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>valve_1</name>
+    <x>295</x>
+    <y>220</y>
+    <width>70</width>
+    <height>70</height>
+    <points>
+      <point x="70.0" y="70.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="70.0" y="0.0">
+      </point>
+      <point x="0.0" y="70.0">
+      </point>
+    </points>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <rules>
+      <rule name="open/close" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color red="0" green="255" blue="0">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color red="255" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>VAC_PMIT:VLV:TBO_sts</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_7</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:VLV:TBO_req</pv_name>
+        <value>1</value>
+        <description>Open_req</description>
+      </action>
+    </actions>
+    <x>395</x>
+    <y>250</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_8</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:VLV:TBO_req</pv_name>
+        <value>0</value>
+        <description>Close_req</description>
+      </action>
+    </actions>
+    <x>395</x>
+    <y>270</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>VAC_PMIT:VLV:TBO</text>
+    <x>365</x>
+    <y>220</y>
+    <width>160</width>
+    <height>30</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>valve_2</name>
+    <x>140</x>
+    <y>120</y>
+    <width>70</width>
+    <height>70</height>
+    <points>
+      <point x="70.0" y="70.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="70.0" y="0.0">
+      </point>
+      <point x="0.0" y="70.0">
+      </point>
+    </points>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <rules>
+      <rule name="open/close" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color red="0" green="255" blue="0">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color red="255" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>VAC_PMIT:VLV:BYP_sts</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_9</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:VLV:BYP_req</pv_name>
+        <value>1</value>
+        <description>Open_req</description>
+      </action>
+    </actions>
+    <x>30</x>
+    <y>150</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_10</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:VLV:BYP_req</pv_name>
+        <value>0</value>
+        <description>Close_req</description>
+      </action>
+    </actions>
+    <x>30</x>
+    <y>170</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>VAC_PMIT:VLV:BYP</text>
+    <y>130</y>
+    <width>140</width>
+    <height>30</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_4</name>
+    <x>325</x>
+    <y>70</y>
+    <width>10</width>
+    <height>360</height>
+    <line_width>10</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>valve_mode</name>
+    <text>Valve Mode</text>
+    <x>65</x>
+    <y>360</y>
+    <width>110</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <rules>
+      <rule name="Mode Indicator" prop_id="text" out_exp="false">
+        <exp bool_exp="pv0=0">
+          <value>VLV: Closed</value>
+        </exp>
+        <exp bool_exp="pv0=1">
+          <value>VLV: Rough</value>
+        </exp>
+        <exp bool_exp="pv0=2">
+          <value>VLV: Turbo</value>
+        </exp>
+        <pv_name>VAC_PMIT:TRAIN:VLV_mode</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>pump_mode</name>
+    <text>Pump Mode</text>
+    <x>65</x>
+    <y>380</y>
+    <width>110</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <rules>
+      <rule name="Mode Indicator" prop_id="text" out_exp="false">
+        <exp bool_exp="pv0=0">
+          <value>PMP: Off</value>
+        </exp>
+        <exp bool_exp="pv0=1">
+          <value>PMP: Roughing</value>
+        </exp>
+        <exp bool_exp="pv0=2">
+          <value>PMP: Fault</value>
+        </exp>
+        <exp bool_exp="pv0=3">
+          <value>PMP: Turbo</value>
+        </exp>
+        <pv_name>VAC_PMIT:TRAIN:PMP_mode</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>VAC_PMIT:TRAIN:PMP_mode</pv_name>
+    <x>30</x>
+    <y>380</y>
+    <width>30</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>VAC_PMIT:TRAIN:VLV_mode</pv_name>
+    <x>30</x>
+    <y>360</y>
+    <width>30</width>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>VAC_PMI:VLV:TTRAIN_sts</pv_name>
+        <value>0</value>
+        <description>Close Train</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>VAC_PMI:VLV:TTRAIN_req</pv_name>
+        <value>0</value>
+        <description>Reset Turbo Train Valve</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:VLV:TBO_req</pv_name>
+        <value>0</value>
+        <description>Reset Turbo valve</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:PMP:TPMP_req</pv_name>
+        <value>0</value>
+        <description>Reset Turbo Pump</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:VLV:BYP_req</pv_name>
+        <value>0</value>
+        <description>Reset Bypass Valve</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>VAC_PMIT:PMP:RPMP_req</pv_name>
+        <value>0</value>
+        <description>Reset Rough Pump</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>VAC_PMI:GGE:sim</pv_name>
+        <value>101325</value>
+        <description>Reset Chamber</description>
+      </action>
+    </actions>
+    <text>RESET</text>
+    <x>60</x>
+    <y>440</y>
+    <width>60</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_11</name>
+    <actions execute_as_one="true">
+      <action type="execute">
+        <script file="../pyscan/trainrough.py">
+        </script>
+        <description>Execute Script</description>
+      </action>
+    </actions>
+    <text>Rough Config</text>
+    <x>470</x>
+    <y>440</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>VAC_PMIT:TRAIN:PMP_mode</pv_name>
+    <x>30</x>
+    <y>400</y>
+    <width>30</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>pump_mode_1</name>
+    <text>Train Mode</text>
+    <x>65</x>
+    <y>400</y>
+    <width>110</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <rules>
+      <rule name="Mode Indicator" prop_id="text" out_exp="false">
+        <exp bool_exp="pv0=0">
+          <value>TRN: Off</value>
+        </exp>
+        <exp bool_exp="pv0=2">
+          <value>TRN: Roughing</value>
+        </exp>
+        <exp bool_exp="pv0=5">
+          <value>TRN: Turbo</value>
+        </exp>
+        <pv_name>VAC_PMIT:TRAIN:TRN_mode</pv_name>
+      </rule>
+    </rules>
+  </widget>
+</display>
